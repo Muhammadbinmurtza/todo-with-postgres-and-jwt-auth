@@ -1,0 +1,19 @@
+CREATE TABLE new_todos(
+	id SERIAL PRIMARY KEY,
+	created_at TIMESTAMP DEFAULT NOW(),
+	title TEXT UNIQUE Not NULL,
+	description VARCHAR(255),
+	status BOOLEAN DEFAULT FALSE
+	);
+
+INSERT INTO
+	new_todos(title,description,status)
+VALUES
+	('lahore','any description',TRUE)
+
+to find:
+      SELECT * FROM new_todos WHERE id=1;
+
+
+to delete alembic migrations:
+    DROP TABLE alembic_version;
